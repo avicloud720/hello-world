@@ -27,11 +27,10 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
-#       - name: Install dependencies
-#         run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
         
-      - name: Display
-        run: python hello.py
+      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
@@ -61,4 +60,4 @@ jobs:
         with:
           app-name: '2ndaviapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B6747D63708A4934A9CA05A8CE8E9E8F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ECD8AB6F566E480787774BAA24512118 }}
